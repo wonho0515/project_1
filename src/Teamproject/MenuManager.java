@@ -29,7 +29,8 @@ public class MenuManager {
                     System.out.println("소재를 입력하세요 :");
                     String material = input.next();
                     System.out.println("주의사항을 입력하세요 :");
-                    String caution = input.next();
+                    input.nextLine();
+                    String caution = input.nextLine();
                     break;
                 case 2:
                 case 3:
