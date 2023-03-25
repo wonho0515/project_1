@@ -21,15 +21,16 @@ public class MenuManager {
                     System.out.println("가구 식별 번호를 입력하세요 :");
                     int id = input.nextInt();
                     System.out.println("가구를 입력하세요 :");
-                    String furniture = input.next();
+                    input.nextLine();
+                    String furniture = input.nextLine();
                     System.out.println("브랜드를 입력하세요 :");
-                    String brand= input.next();
+                    String brand= input.nextLine();
                     System.out.println("가격을 입력하세요 :");
                     int price = input.nextInt();
-                    System.out.println("소재를 입력하세요 :");
-                    String material = input.next();
-                    System.out.println("주의사항을 입력하세요 :");
                     input.nextLine();
+                    System.out.println("소재를 입력하세요 :");
+                    String material = input.nextLine();
+                    System.out.println("주의사항을 입력하세요 :");
                     String caution = input.nextLine();
                     break;
                 case 2:
