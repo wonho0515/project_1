@@ -18,25 +18,25 @@ public class MenuManager {
             num = input.nextInt();
             switch (num) {
                 case 1:
-                    System.out.println("가구 식별 번호를 입력하세요 :");
+                    System.out.println("Furniture identification number :");
                     int id = input.nextInt();
-                    System.out.println("가구를 입력하세요 :");
+                    System.out.println("Furniture name :");
                     input.nextLine();
                     String furniture = input.nextLine();
-                    System.out.println("브랜드를 입력하세요 :");
+                    System.out.println("Furniture brand :");
                     String brand= input.nextLine();
-                    System.out.println("가격을 입력하세요 :");
+                    System.out.println("Furniture cost :");
                     int price = input.nextInt();
                     input.nextLine();
-                    System.out.println("소재를 입력하세요 :");
+                    System.out.println("Furniture material :");
                     String material = input.nextLine();
-                    System.out.println("주의사항을 입력하세요 :");
+                    System.out.println("Furniture caution :");
                     String caution = input.nextLine();
                     break;
                 case 2:
                 case 3:
                 case 4:
-                    System.out.println("가구 식별 번호를 입력하세요 :");
+                    System.out.println("Furniture identification number :");
                     int id_2 = input.nextInt();
 
             }
