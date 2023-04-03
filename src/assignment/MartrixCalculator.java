@@ -7,16 +7,17 @@ public class MartrixCalculator{
 
         for(int i=0;i<2;i++){  //3중 for문을 활용하여 행렬의 곱셈 계산
             for(int j=0;j<2;j++){
-                int sum=0;
+                int multiply=0;
                 for(int k=0;k<3;k++){
-                    sum+=A[i][k]*B[k][j];
+                    multiply+=A[i][k]*B[k][j];
                 }
-                C[i][j]=sum; //결과를 배열 C에 저장
+                C[i][j]=multiply; //결과를 배열 C에 저장
             }
         }
-        for(int i=0;i<2;i++){ //for문을 통해 결과 출력
-            for(int j=0;j<2;j++){
-                System.out.print(C[i][j]+" ");
+
+        for(int m=0;m<2;m++){ //for문을 통해 결과 출력
+            for(int n=0;n<2;n++){
+                System.out.print(C[m][n]+" ");
             }
             System.out.println();
         }
