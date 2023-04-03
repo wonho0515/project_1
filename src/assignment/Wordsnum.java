@@ -17,7 +17,7 @@ public class Wordsnum {
         int wordsnum = words.length; //전체 단어 수
         System.out.println("Total number of words: " + wordsnum);
 
-        HashSet<String> all = new HashSet<>(); //중복되지 않는 단어를 저장할 HashSet클래스 변수 all선언
+        HashSet<String> all = new HashSet<String>(); //중복되지 않는 단어를 저장할 HashSet클래스 변수 all선언
         for(int i = 0; i < words.length; i++){ //배열 words에 있는 모든 요소들을 all에 추가
             all.add(words[i]);
         }
