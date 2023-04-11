@@ -1,3 +1,5 @@
+package Practice;
+
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Import_ex {

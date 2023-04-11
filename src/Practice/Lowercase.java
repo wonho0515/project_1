@@ -1,3 +1,5 @@
+package Practice;
+
 public class Lowercase {
     public static void main(String[]args){
         String str1="Hello Java";

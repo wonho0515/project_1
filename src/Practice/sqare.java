@@ -1,3 +1,5 @@
+package Practice;
+
 public class sqare {
     public static void main(String[] args){
         int[] values={12,24,-23,47};

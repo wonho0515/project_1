@@ -1,3 +1,5 @@
+package Practice;
+
 public class Compare1 {
     public static void main(String[]args){
         String str1="hello java";
