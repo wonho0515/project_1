@@ -1,4 +1,4 @@
-package Teamproject;
+package Practice;
 
 import java.util.Scanner;
 
