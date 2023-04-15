@@ -19,4 +19,9 @@ public class Car {
     public double getSpeed(){
         return speed;
     }
+    public void println(){
+        System.out.print("출시년도:"+getYear()+"년 ");
+        System.out.print("제조사:"+getMake()+" ");
+        System.out.println("최고속력:"+getSpeed()+" ");
+    }
 }

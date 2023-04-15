@@ -21,13 +21,17 @@ public class MonsterHunter {
                 int hp = dragon.getHp();
                 int resthp = hp - 100;
                 dragon.setHp(resthp);
-                System.out.printf("Monster의 체력이 %d 남았습니다.\n", dragon.getHp());
+                System.out.printf("Monster has %d hp.\n", dragon.getHp());
             } else if (x.equals("아니요")) {
                 System.out.println("후퇴합니다");
                 break;
             } else {
                 System.out.println("다시 입력하세요");
             }
+        }
+        if(dragon.getHp()==0){
+            System.out.println("\"끄아아..아악..\" 드래곤을 물리쳤습니다.\n");
+            System.out.println("당신은 지구를 구한 영웅입니다.");
         }
     }
 }

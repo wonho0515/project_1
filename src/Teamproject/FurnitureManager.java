@@ -73,18 +73,22 @@ public class FurnitureManager {
                         furniture.id = input.nextInt();
                     } else if (num == 2) {
                         System.out.println("Furniture Name: ");
+                        input.nextLine();
                         furniture.funiture = input.nextLine();
                     } else if (num == 3) {
                         System.out.println("Furniture Brand: ");
+                        input.nextLine();
                         furniture.brand = input.nextLine();
                     } else if (num == 4) {
                         System.out.println("Furniture Cost: ");
                         furniture.price = input.nextInt();
                     } else if (num == 5) {
                         System.out.println("Furniture Material: ");
+                        input.nextLine();
                         furniture.material = input.nextLine();
                     } else if (num == 6) {
                         System.out.println("Furniture Caution: ");
+                        input.nextLine();
                         furniture.caution = input.nextLine();
                     } else {
                         continue;
