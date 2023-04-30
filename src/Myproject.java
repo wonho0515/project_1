@@ -1,5 +1,3 @@
-package Teamproject;
-
 import java.util.Scanner;
 
 public class Myproject {
