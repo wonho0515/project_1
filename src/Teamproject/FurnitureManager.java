@@ -1,7 +1,9 @@
 package Teamproject;
 
 import TeamprojectFurniture.Furniture;
+import TeamprojectFurniture.GlassFurniture;
 import TeamprojectFurniture.MetalFurniture;
+import TeamprojectFurniture.PlasticFurniture;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -17,9 +19,11 @@ public class FurnitureManager {
     public void addFurniture() {
         int kind=0;
         Furniture furniture;
-        while(kind!=1&&kind!=2) {
+        while(kind!=1&&kind!=2&&kind!=3&&kind!=4) {
             System.out.println("1 for Wood");
             System.out.println("2 for Metal");
+            System.out.println("3 for Plastic");
+            System.out.println("4 for Glass");
             System.out.println("Select num for Furniture Kind: ");
             kind = input.nextInt();
             if (kind == 1) {
@@ -33,10 +37,21 @@ public class FurnitureManager {
                 furniture.getUserInput(input);
                 furnitures.add(furniture);
                 break;
-
+            }
+            else if (kind==3){
+                furniture=new PlasticFurniture();
+                furniture.getUserInput(input);
+                furnitures.add(furniture);
+                break;
+            }
+            else if(kind==4){
+                furniture=new GlassFurniture();
+                furniture.getUserInput(input);
+                furnitures.add(furniture);
+                break;
             }
             else {
-                System.out.println("Select num for Furniture Kind between 1 and 2: ");
+                System.out.println("Select num for Furniture Kind between 1 ~ 4: ");
             }
         }
     }
