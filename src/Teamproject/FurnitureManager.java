@@ -1,9 +1,6 @@
 package Teamproject;
 
-import TeamprojectFurniture.Furniture;
-import TeamprojectFurniture.GlassFurniture;
-import TeamprojectFurniture.MetalFurniture;
-import TeamprojectFurniture.PlasticFurniture;
+import TeamprojectFurniture.*;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -27,25 +24,25 @@ public class FurnitureManager {
             System.out.println("Select num for Furniture Kind: ");
             kind = input.nextInt();
             if (kind == 1) {
-                furniture=new Furniture();
+                furniture=new Furniture(FurnitureKind.Wood);
                 furniture.getUserInput(input);
                 furnitures.add(furniture);
                 break;
             }
             else if (kind == 2) {
-                furniture=new MetalFurniture();
+                furniture=new MetalFurniture(FurnitureKind.Metal);
                 furniture.getUserInput(input);
                 furnitures.add(furniture);
                 break;
             }
             else if (kind==3){
-                furniture=new PlasticFurniture();
+                furniture=new PlasticFurniture(FurnitureKind.Plastic);
                 furniture.getUserInput(input);
                 furnitures.add(furniture);
                 break;
             }
             else if(kind==4){
-                furniture=new GlassFurniture();
+                furniture=new GlassFurniture(FurnitureKind.Glass);
                 furniture.getUserInput(input);
                 furnitures.add(furniture);
                 break;

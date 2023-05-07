@@ -3,6 +3,11 @@ package TeamprojectFurniture;
 import java.util.Scanner;
 
 public class GlassFurniture extends Furniture{
+
+    public GlassFurniture(FurnitureKind kind){
+        super(kind);
+    }
+    protected String crack;
     public void getUserInput(Scanner input){
         System.out.print("Furniture identification number :");
         int id = input.nextInt();
@@ -37,5 +42,44 @@ public class GlassFurniture extends Furniture{
 
             }
         }
+        answer='x';
+        while(answer!='y'&&answer!='Y'&&answer!='n'&&answer!='N'){
+            System.out.println("Do you have any crack? (Y/N)");
+            answer=input.next().charAt(0);
+            if(answer=='y'||answer=='Y'){
+                System.out.println("Furniture crack:");
+                input.nextLine();
+                String crack=input.nextLine();
+                this.crack=crack;
+                break;
+            }
+            else if(answer=='n'|| answer=='N'){
+                this.crack=" ";
+                break;
+            }
+            else{
+
+            }
+        }
+    }
+    public void printInfo(){
+        String skind="none";
+        switch(this.kind) {
+            case Wood:
+                skind="Wood";
+                break;
+            case Metal:
+                skind="Metal";
+                break;
+            case Plastic:
+                skind="Plastic";
+                break;
+            case Glass:
+                skind="Glass";
+                break;
+            default:
+
+        }
+        System.out.println("kind:"+skind+", id:"+id+", funiture: "+funiture+", brand: "+brand+", price:"+price+", caution: "+caution+", crack:"+crack);
     }
 }

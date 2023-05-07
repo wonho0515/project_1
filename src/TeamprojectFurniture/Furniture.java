@@ -15,11 +15,24 @@ public class Furniture {
     public Furniture(){
 
     }
+    public Furniture(FurnitureKind kind){
+        this.kind=kind;
+    }
     public Furniture(int id, String funiture){
-
+        this.id=id;
+        this.funiture=funiture;
     }
 
     public Furniture(int id, String funiture,String brand,int price, String caution){
+        this.id=id;
+        this.funiture=funiture;
+        this.brand=brand;
+        this.price=price;
+        this.caution=caution;
+    }
+
+    public Furniture(FurnitureKind kind,int id, String funiture,String brand,int price, String caution){
+        this.kind=kind;
         this.id=id;
         this.funiture=funiture;
         this.brand=brand;
@@ -75,8 +88,26 @@ public class Furniture {
     }
 
 
+
     public void printInfo(){
-        System.out.println("id:"+id+" funiture: "+funiture+" brand: "+brand+" price: "+price+" caution: "+caution);
+        String skind="none";
+        switch(this.kind) {
+            case Wood:
+                skind="Wood";
+                break;
+            case Metal:
+                skind="Metal";
+                break;
+            case Plastic:
+                skind="Plastic";
+                break;
+            case Glass:
+                skind="Glass";
+                break;
+            default:
+
+        }
+        System.out.println("kind: "+skind+"id:"+id+" funiture: "+funiture+" brand: "+brand+" price: "+price+" caution: "+caution);
     }
     public void getUserInput(Scanner input){
         System.out.print("Furniture identification number :");
