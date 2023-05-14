@@ -1,6 +1,6 @@
 package assignment_7;
 
-abstract public class ShapeDemo {
+public class ShapeDemo {
     public static void main(String[] args){
         Shape sha[]=new Shape[3];
         sha[0]=new Triangle(3,4);

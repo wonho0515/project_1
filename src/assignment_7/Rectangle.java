@@ -1,6 +1,6 @@
 package assignment_7;
 
-public class Rectangle extends Shape{
+public class Rectangle implements Shape{
     int x,y;
     Rectangle(int x,int y){
         this.x=x;
