@@ -2,7 +2,7 @@ package TeamprojectFurniture;
 
 import java.util.Scanner;
 
-public class PlasticFurniture extends Furniture{
+public class PlasticFurniture extends Furniture implements FurnitureInput {
 
     public PlasticFurniture(FurnitureKind kind){
         super(kind);
@@ -42,6 +42,26 @@ public class PlasticFurniture extends Furniture{
 
             }
         }
+    }
+    public void printInfo(){
+        String skind="none";
+        switch(this.kind) {
+            case Wood:
+                skind="Wood";
+                break;
+            case Metal:
+                skind="Metal";
+                break;
+            case Plastic:
+                skind="Plastic";
+                break;
+            case Glass:
+                skind="Glass";
+                break;
+            default:
+
+        }
+        System.out.println("kind: "+skind+", id:"+id+", funiture: "+funiture+", brand: "+brand+", price: "+price+", caution: "+caution);
     }
 }
 

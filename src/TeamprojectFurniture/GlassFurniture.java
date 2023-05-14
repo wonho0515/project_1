@@ -2,7 +2,7 @@ package TeamprojectFurniture;
 
 import java.util.Scanner;
 
-public class GlassFurniture extends Furniture{
+public class GlassFurniture extends Furniture implements FurnitureInput{
 
     protected String specialBrand;
     protected String specialCaution;
@@ -84,6 +84,6 @@ public class GlassFurniture extends Furniture{
                 break;
             default:
         }
-        System.out.println("kind:"+skind+" id:"+id+" funiture: "+funiture+" brand: "+brand+" price: "+price+" caution: "+caution + " special brand: "+brand+" special caution: "+caution);
+        System.out.println("kind:"+skind+", id:"+id+", funiture: "+funiture+", brand: "+brand+", price: "+price+", caution: "+caution + ", special brand: "+brand+", special caution: "+caution);
     }
 }
