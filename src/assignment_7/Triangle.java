@@ -8,6 +8,7 @@ public class Triangle extends Shape{
     }
 
     public void getArea(){
-        System.out.println("삼각형의 크기: "+x*y);
+        System.out.println("삼각형의 크기: "+(x*y)/2);
     }
 }
+
