@@ -1,5 +1,7 @@
 package TeamprojectFurniture;
 
+import TeamprojectException.CautionFormatException;
+
 import java.util.Scanner;
 
 public abstract class MiddleFurniture extends Furniture{
@@ -16,19 +18,22 @@ public abstract class MiddleFurniture extends Furniture{
 
     public void setFurnitureCautionwithYN(Scanner input){
         char answer='x';
-        while(answer!='y'&&answer!='Y'&&answer!='n'&&answer!='N'){
+        while(answer!='y'&&answer!='Y'&&answer!='n'&&answer!='N') {
             System.out.println("Do you have any caution? (Y/N)");
-            answer=input.next().charAt(0);
-            if(answer=='y'||answer=='Y'){
-                setFurnitureCaution(input);
-                break;
-            }
-            else if(answer=='n'|| answer=='N'){
-                this.setCaution("");
-                break;
-            }
-            else{
+            answer = input.next().charAt(0);
+            try {
+                if (answer == 'y' || answer == 'Y') {
+                    setFurnitureCaution(input);
+                    break;
+                } else if (answer == 'n' || answer == 'N') {
+                    this.setCaution("");
+                    break;
+                } else {
 
+                }
+            }
+            catch (CautionFormatException e){
+                System.out.println("Incorrect Caution Format. Fill it out in detail.");
             }
         }
     }

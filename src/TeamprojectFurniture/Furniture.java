@@ -1,5 +1,6 @@
 package TeamprojectFurniture;
 
+import TeamprojectException.CautionFormatException;
 import TeamprojectFurniture.FurnitureKind;
 
 import java.util.Scanner;
@@ -44,7 +45,10 @@ public abstract class Furniture implements FurnitureInput {
         return caution;
     }
 
-    public void setCaution(String caution) {
+    public void setCaution(String caution) throws CautionFormatException{
+        if(caution.length()<3 && !caution.equals("")){
+            throw new CautionFormatException();
+        }
         this.caution = caution;
     }
 
@@ -116,11 +120,18 @@ public abstract class Furniture implements FurnitureInput {
         this.setPrice(price);
     }
 
-    public void setFurnitureCaution(Scanner input){
-        System.out.println("Furniture Caution: ");
+    public void setFurnitureCaution(Scanner input) {
+        String caution = " ";
         input.nextLine();
-        String caution = input.nextLine();
-        this.setCaution(caution);
+        while (caution.length() < 3) {
+            System.out.println("Furniture Caution: ");
+            caution = input.nextLine();
+            try {
+                this.setCaution(caution);
+            } catch (CautionFormatException e) {
+                System.out.println("Incorrect Caution Format. Fill it out in detail.");
+            }
+        }
     }
 
     public String getKindString(){

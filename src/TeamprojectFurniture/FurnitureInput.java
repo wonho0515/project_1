@@ -1,12 +1,14 @@
 package TeamprojectFurniture;
 
+import TeamprojectException.CautionFormatException;
+
 import java.util.Scanner;
 
 public interface FurnitureInput {
 
     public int getId();
     public void setId(int id);
-    public void setCaution(String caution);
+    public void setCaution(String caution) throws CautionFormatException;
     public void setPrice(int price);
     public void setBrand(String brand);
     public void setFuniture(String funiture);

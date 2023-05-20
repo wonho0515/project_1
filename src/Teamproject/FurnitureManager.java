@@ -3,6 +3,7 @@ package Teamproject;
 import TeamprojectFurniture.*;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class FurnitureManager {
@@ -14,41 +15,46 @@ public class FurnitureManager {
     }
 
     public void addFurniture() {
-        int kind=0;
+        int kind = 0;
         FurnitureInput furnitureInput;
-        while(kind!=1&&kind!=2&&kind!=3&&kind!=4) {
-            System.out.println("1 for Wood");
-            System.out.println("2 for Metal");
-            System.out.println("3 for Plastic");
-            System.out.println("4 for Glass");
-            System.out.println("Select num for Furniture Kind: ");
-            kind = input.nextInt();
-            if (kind == 1) {
-                furnitureInput=new WoodFurniture(FurnitureKind.Wood);
-                furnitureInput.getUserInput(input);
-                furnitures.add(furnitureInput);
-                break;
+        while (kind < 1 || kind > 4) {
+            try {
+                System.out.println("1 for Wood");
+                System.out.println("2 for Metal");
+                System.out.println("3 for Plastic");
+                System.out.println("4 for Glass");
+                System.out.println("Select num for Furniture Kind: ");
+                kind = input.nextInt();
+                if (kind == 1) {
+                    furnitureInput = new WoodFurniture(FurnitureKind.Wood);
+                    furnitureInput.getUserInput(input);
+                    furnitures.add(furnitureInput);
+                    break;
+                } else if (kind == 2) {
+                    furnitureInput = new MetalFurniture(FurnitureKind.Metal);
+                    furnitureInput.getUserInput(input);
+                    furnitures.add(furnitureInput);
+                    break;
+                } else if (kind == 3) {
+                    furnitureInput = new PlasticFurniture(FurnitureKind.Plastic);
+                    furnitureInput.getUserInput(input);
+                    furnitures.add(furnitureInput);
+                    break;
+                } else if (kind == 4) {
+                    furnitureInput = new GlassFurniture(FurnitureKind.Glass);
+                    furnitureInput.getUserInput(input);
+                    furnitures.add(furnitureInput);
+                    break;
+                } else {
+                    System.out.println("Select num for Furniture Kind between 1 ~ 4: ");
+                }
             }
-            else if (kind == 2) {
-                furnitureInput=new MetalFurniture(FurnitureKind.Metal);
-                furnitureInput.getUserInput(input);
-                furnitures.add(furnitureInput);
-                break;
-            }
-            else if (kind==3){
-                furnitureInput=new PlasticFurniture(FurnitureKind.Plastic);
-                furnitureInput.getUserInput(input);
-                furnitures.add(furnitureInput);
-                break;
-            }
-            else if(kind==4){
-                furnitureInput=new GlassFurniture(FurnitureKind.Glass);
-                furnitureInput.getUserInput(input);
-                furnitures.add(furnitureInput);
-                break;
-            }
-            else {
-                System.out.println("Select num for Furniture Kind between 1 ~ 4: ");
+            catch(InputMismatchException e) {
+                System.out.println("Please put an integer between 1 and 4!");
+                if(input.hasNext()){
+                    input.next();
+                }
+                kind=-1;
             }
         }
     }
