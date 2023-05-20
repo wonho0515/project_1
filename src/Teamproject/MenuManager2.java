@@ -9,26 +9,35 @@ public class MenuManager2 {
 
         int num = -1;
         while (num != 5) {
-            System.out.println("*** Furniture Management System Menu ***");
-            System.out.println("1. Add Furnitures");
-            System.out.println("2. Delete Furnitures");
-            System.out.println("3. Edit Furnitures");
-            System.out.println("4. View Furnitures");
-            System.out.println("5. Exit");
-            System.out.println("Select one number between 1 - 5:");
+            showMenu();
             num = input.nextInt();
-            if (num == 1) {
-                furnitureManager.addFurniture();
-            } else if (num == 2) {
-                furnitureManager.deleteFurniture();
-            } else if (num == 3) {
-                furnitureManager.editFurniture();
-            } else if (num == 4) {
-                furnitureManager.viewFurniture();
-            } else {
-                continue;
+            switch(num){
+                case 1:
+                    furnitureManager.addFurniture();
+                    break;
+                case 2:
+                    furnitureManager.deleteFurniture();
+                    break;
+                case 3:
+                    furnitureManager.editFurniture();
+                    break;
+                case 4:
+                    furnitureManager.viewFurniture();
+                    break;
+                default:
+                    continue;
             }
         }
+    }
+
+    public static void showMenu(){
+        System.out.println("*** Furniture Management System Menu ***");
+        System.out.println("1. Add Furnitures");
+        System.out.println("2. Delete Furnitures");
+        System.out.println("3. Edit Furnitures");
+        System.out.println("4. View Furnitures");
+        System.out.println("5. Exit");
+        System.out.println("Select one number between 1 - 5:");
     }
 
 }

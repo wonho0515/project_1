@@ -12,4 +12,9 @@ public interface FurnitureInput {
     public void setFuniture(String funiture);
     public void getUserInput(Scanner input);
     public void printInfo();
+    public void setFurnitureID(Scanner input);
+    public void setFurnitureName(Scanner input);
+    public void setFurnitureBrand(Scanner input);
+    public void setFurnitureCost(Scanner input);
+    public void setFurnitureCaution(Scanner input);
 }

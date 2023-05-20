@@ -1,5 +1,8 @@
 package assignment_7;
 
-public interface Shape {
+public abstract class Shape {
+    private int size;
+
     public abstract void getArea();
+
 }

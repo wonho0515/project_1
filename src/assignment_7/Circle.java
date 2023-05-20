@@ -1,6 +1,6 @@
 package assignment_7;
 
-public class Circle implements Shape{
+public class Circle extends Shape{
     int r;
     Circle(int r){
         this.r=r;

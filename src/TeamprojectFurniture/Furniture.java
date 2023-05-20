@@ -4,7 +4,7 @@ import TeamprojectFurniture.FurnitureKind;
 
 import java.util.Scanner;
 
-public abstract class Furniture {
+public abstract class Furniture implements FurnitureInput {
     protected FurnitureKind kind = FurnitureKind.Wood;
     protected int id;
     protected String funiture;
@@ -90,5 +90,57 @@ public abstract class Furniture {
 
 
     public abstract void printInfo();
+
+    public void setFurnitureID(Scanner input){
+        System.out.println("Furniture ID: ");
+        int furnitureid = input.nextInt();
+        this.setId(furnitureid);
+    }
+
+    public void setFurnitureName(Scanner input){
+        System.out.println("Furniture Name: ");
+        input.nextLine();
+        String funiture = input.nextLine();
+        this.setFuniture(funiture);
+    }
+
+    public void setFurnitureBrand(Scanner input){
+        System.out.println("Furniture Brand: ");
+        String brand = input.nextLine();
+        this.setFuniture(brand);
+    }
+
+    public void setFurnitureCost(Scanner input){
+        System.out.println("Furniture Cost: ");
+        int price = input.nextInt();
+        this.setPrice(price);
+    }
+
+    public void setFurnitureCaution(Scanner input){
+        System.out.println("Furniture Caution: ");
+        input.nextLine();
+        String caution = input.nextLine();
+        this.setCaution(caution);
+    }
+
+    public String getKindString(){
+        String skind="none";
+        switch(this.kind) {
+            case Wood:
+                skind="Wood";
+                break;
+            case Metal:
+                skind="Metal";
+                break;
+            case Plastic:
+                skind="Plastic";
+                break;
+            case Glass:
+                skind="Glass";
+                break;
+            default:
+        }
+        return skind;
+    }
 
 }
