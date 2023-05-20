@@ -25,11 +25,12 @@ public class GlassFurniture extends MiddleFurniture {
         while(answer!='y'&&answer!='Y'&&answer!='n'&&answer!='N'){
             System.out.println("Do you have special cautions? (Y/N)");
             answer=input.next().charAt(0);
+            input.nextLine();
             if(answer=='y'||answer=='Y'){
                 setFurnitureCaution(input);
                 break;
             }
-            else if(answer=='n'|| answer=='N'){
+            else if(answer=='n'|| answer=='N') {
                 this.setCaution("");
                 break;
             }
@@ -43,6 +44,5 @@ public class GlassFurniture extends MiddleFurniture {
         String skind = getKindString();
         System.out.println("kind:"+skind+", id:"+id+", funiture: "+funiture+", brand: "+brand+", price: "+price+", caution: "+caution + ", special brand: "+brand+", special caution: "+caution);
     }
-
 
 }

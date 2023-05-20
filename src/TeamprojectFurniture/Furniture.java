@@ -107,7 +107,7 @@ public abstract class Furniture implements FurnitureInput {
     public void setFurnitureBrand(Scanner input){
         System.out.println("Furniture Brand: ");
         String brand = input.nextLine();
-        this.setFuniture(brand);
+        this.setBrand(brand);
     }
 
     public void setFurnitureCost(Scanner input){
