@@ -3,9 +3,11 @@ package TeamprojectFurniture;
 import TeamprojectException.CautionFormatException;
 import TeamprojectFurniture.FurnitureKind;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
-public abstract class Furniture implements FurnitureInput {
+public abstract class Furniture implements FurnitureInput, Serializable {
+    private static final long serialVersionUID = -3038442874895967315L;
     protected FurnitureKind kind = FurnitureKind.Wood;
     protected int id;
     protected String funiture;
