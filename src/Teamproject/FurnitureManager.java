@@ -8,7 +8,11 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 
+
 public class FurnitureManager implements Serializable {
+    /**
+     *
+     */
     private static final long serialVersionUID = -1585899128788056779L;
     ArrayList<FurnitureInput> furnitures = new ArrayList<FurnitureInput>();
     transient Scanner input;

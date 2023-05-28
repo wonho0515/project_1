@@ -42,7 +42,7 @@ public class MenuManager2 {
                         break;
                     case 4:
                         furnitureManager.viewFurniture();
-                        Logger.log("view a furniture");
+                        Logger.log("view a list of furniture");
                         break;
                     default:
                         continue;

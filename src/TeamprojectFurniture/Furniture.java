@@ -155,5 +155,4 @@ public abstract class Furniture implements FurnitureInput, Serializable {
         }
         return skind;
     }
-
 }
