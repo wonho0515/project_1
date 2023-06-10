@@ -138,6 +138,13 @@ public class FurnitureManager implements Serializable {
         }
     }
 
+    public int size(){
+        return furnitures.size();
+    }
+    public FurnitureInput get(int index){
+        return (Furniture) furnitures.get(index);
+    }
+
     public void showEditMenu(){
         System.out.println("*** Furniture Info Edit Menu ***");
         System.out.println("1. Edit Id");

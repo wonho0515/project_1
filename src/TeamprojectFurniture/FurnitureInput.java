@@ -8,9 +8,13 @@ public interface FurnitureInput {
 
     public int getId();
     public void setId(int id);
+    public String getCaution();
     public void setCaution(String caution) throws CautionFormatException;
+    public int getPrice();
     public void setPrice(int price);
+    public String getBrand();
     public void setBrand(String brand);
+    public String getFuniture();
     public void setFuniture(String funiture);
     public void getUserInput(Scanner input);
     public void printInfo();

@@ -1,5 +1,6 @@
 package Teamproject;
 
+import Teamprojectgui.WindowFrame;
 import log.EventLogger;
 
 import java.awt.*;
@@ -17,6 +18,7 @@ public class MenuManager2 {
             furnitureManager=new FurnitureManager(input);
         }
 
+        WindowFrame frame=new WindowFrame(furnitureManager);
         selectMenu(input, furnitureManager);
         putObject(furnitureManager,"furnitureManager.ser");
     }
